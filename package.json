@@ -1,0 +1,28 @@
+{
+  "name": "@soku-conf/vite-plugin-lib",
+  "description": "The Vite Plugin for Lib mode.",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "pub": "pnpm build && npm publish --access public"
+  },
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "devDependencies": {
+    "@soku-conf/eslint-config": "^1.0.3",
+    "eslint": "^8.56.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0"
+  }
+}
